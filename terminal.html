@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link type="icon" href="FA.jpeg">
+  <title>Terminal Portfolio</title>
+</head>
+
+<body style="
+  background:#020617;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  padding:40px;
+  overflow:hidden;
+  font-family:monospace;
+">
+
+  <div id="terminal" style="
+    width:90%;
+    max-width:700px;
+    background:#0f172a;
+    border:2px solid #38bdf8;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 20px #38bdf8;
+    margin-right:20px;
+    margin-bottom:20px;
+  ">
+
+    <!-- Top Bar -->
+    <div style="
+      background:#1e293b;
+      padding:12px;
+      display:flex;
+      gap:8px;
+    ">
+
+      <span style="
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        background:#ff5f56;
+        display:block;
+      "></span>
+
+      <span style="
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        background:#ffbd2e;
+        display:block;
+      "></span>
+
+      <span style="
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        background:#27c93f;
+        display:block;
+      "></span>
+
+    </div>
+
+    <!-- Terminal Output -->
+    <div id="output" style="
+      padding:20px;
+      color:#f8fafc;
+      line-height:1.8;
+      min-height:250px;
+      font-size:18px;
+    "></div>
+
+    <!-- Button -->
+    <div style="
+      padding:20px;
+      text-align:center;
+    ">
+
+      <button onclick="openLink()" style="
+        background:#38bdf8;
+        color:#020617;
+        border:none;
+        padding:12px 25px;
+        border-radius:10px;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+        box-shadow:0 0 15px #38bdf8;
+      ">
+        Click Me
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const output = document.getElementById("output");
+
+    const lines = [
+      "faisal@portfolio:~$ whoami",
+      "Aspiring Full Stack Developer",
+      "",
+
+      "faisal@portfolio:~$ skills",
+      "HTML CSS JavaScript React Node.js DSA",
+      "",
+
+      "faisal@portfolio:~$ current_status",
+      "Learning. Building. Growing."
+    ];
+
+    let index = 0;
+
+    function typeLine() {
+
+      if(index < lines.length){
+
+        const p = document.createElement("p");
+
+        if(lines[index].includes("faisal@portfolio")){
+
+          p.innerHTML =
+          `<span style="color:#38bdf8;font-weight:bold;">
+            ${lines[index]}
+          </span>`;
+
+        }else{
+
+          p.textContent = lines[index];
+
+        }
+
+        output.appendChild(p);
+
+        index++;
+
+        setTimeout(typeLine, 500);
+
+      }
+
+    }
+
+    typeLine();
+
+    // Button Link Function
+    function openLink(){
+
+      window.location.href = "click me.html", "_blank"
+
+    }
+
+  </script>
+
+</body>
+</html>

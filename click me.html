@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+</head>
+
+<body style="
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#020617;
+  overflow:hidden;
+  font-family:monospace;
+">
+
+  <!-- Glow Effect -->
+  <div style="
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#38bdf8;
+    filter:blur(180px);
+    opacity:0.15;
+    border-radius:50%;
+  "></div>
+
+  <!-- Card -->
+  <div style="
+    width:90%;
+    max-width:700px;
+    background:#0f172a;
+    border:2px solid #38bdf8;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 30px rgba(56,189,248,0.4);
+    z-index:2;
+  ">
+
+    <h1 style="
+      font-size:55px;
+      margin-bottom:10px;
+      color:#38bdf8;
+      text-shadow:0 0 20px #38bdf8;
+    ">
+      THANK YOU
+    </h1>
+
+    <p style="
+      font-size:20px;
+      color:#cbd5e1;
+      line-height:1.8;
+    ">
+      Thanks for visiting my portfolio.
+      <br>
+      I’m currently learning and building
+      modern web projects every day.
+    </p>
+
+    <!-- Animated Line -->
+    <div style="
+      width:120px;
+      height:4px;
+      background:#38bdf8;
+      margin:30px auto;
+      border-radius:10px;
+      box-shadow:0 0 15px #38bdf8;
+      animation:grow 2s infinite alternate;
+    "></div>
+
+    <!-- Extra Text -->
+    <p style="
+      color:#94a3b8;
+      font-size:17px;
+      margin-top:20px;
+    ">
+      “Small steps every day create big results.”
+    </p>
+
+    <!-- Button -->
+    <button onclick="openInstagram()" style="
+      margin-top:35px;
+      padding:14px 30px;
+      border:none;
+      border-radius:12px;
+      background:#38bdf8;
+      color:#020617;
+      font-size:17px;
+      font-weight:bold;
+      cursor:pointer;
+      box-shadow:0 0 20px #38bdf8;
+      transition:0.3s;
+    ">
+      Keep supporting me
+    </button>
+
+    <p id="message" style="
+      margin-top:25px;
+      color:#38bdf8;
+      font-size:18px;
+      display:none;
+    ">
+      Keep supporting my coding journey 🚀
+      
+    </p>
+
+  </div>
+
+  <style>
+
+    @keyframes grow{
+      from{
+        width:120px;
+      }
+
+      to{
+        width:220px;
+      }
+    }
+
+    button:hover{
+      transform:scale(1.05);
+    }
+
+  </style>
+
+  <script>
+
+    function openInstagram(){
+
+    //   document.getElementById("message").style.display = "block";
+    window.open("https://www.instagram.com/faisal.istic/")
+
+
+    }
+
+  </script>
+
+</body>
+</html>
